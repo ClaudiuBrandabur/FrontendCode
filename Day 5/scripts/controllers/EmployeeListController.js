@@ -59,4 +59,16 @@ hrApp.controller('EmployeeListController', ['$scope', '$http', '$location', 'Com
         $scope.editEmployee = function(employeeId) {
             $location.url('/employeeEdit/' + employeeId);
         };
+        
+        $scope.deleteEmployee = function (employee) {
+            $http({url: CommonResourcesFactory.deleteEmployeeUrl, method: 'DELETE', data: employee,
+                headers: {
+                    "Content-Type": "application/json"
+                }})
+                .success(function (data, status, headers, config) {
+                    $location.url('/employeeList');
+                });
+
+        }
+        
     }]);

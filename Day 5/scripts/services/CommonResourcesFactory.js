@@ -1,5 +1,5 @@
 hrApp.factory('CommonResourcesFactory', function () {
-        var baseUrl = "http://10.16.8.77:8181/hrapp/";
+        var baseUrl = "http://10.16.8.77:8181/datamodel/";
         return {
             findAllDepartmentsUrl: baseUrl + "departments/findAll",
             findAllEmployeesUrl: baseUrl + "employees/findAll",
@@ -26,7 +26,7 @@ hrApp.factory('CommonResourcesFactory', function () {
 );
 
 hrApp.factory('CommonResourcesFactoryBackup', function () {
-        var baseUrl = "http://10.16.8.77:8181/hrapp/";
+        var baseUrl = "http://10.16.8.77:8181/datamodel/";
         return {
             findAllDepartmentsUrl: baseUrl + "departments",
             findAllEmployeesUrl: baseUrl + "employees",
